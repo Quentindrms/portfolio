@@ -8,7 +8,7 @@ export default function Label(props:LabelProps) {
 
     return (
         <div>
-            <p class='w-fit text-xl font-text-primary text-primary-text bg-indigo-500 p-2 rounded-xl'>{props.children}</p>
+            <p class='w-fit text-xl font-text-primary text-primary-text bg-blue-600 p-2 rounded-xl'>{props.children}</p>
         </div>
     )
 }
