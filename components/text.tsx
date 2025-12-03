@@ -2,7 +2,7 @@ import clsx from "clsx";
 import {splitProps, type JSX} from "solid-js"
 import { Dynamic } from "solid-js/web";
 
-type HeadingLevel = 1 | 2 | 3;
+type HeadingLevel = 1 | 2 | 3 | 4 | 5;
 type BoldValue = "light" | "regular" | "bold" | "extra-bold" | "black";
 
 type TextProps = JSX.HTMLAttributes<HTMLParagraphElement | HTMLSpanElement> & {
@@ -18,6 +18,8 @@ const levelclasses: Record<HeadingLevel, string> = {
     1: "text-5xl",
     2: "text-4xl",
     3: "text-3xl",
+    4: "text-2xl",
+    5: "text-xl",
 }
 
 const boldCLasses: Record<BoldValue, string> = {

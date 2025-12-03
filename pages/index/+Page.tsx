@@ -15,6 +15,18 @@ export default function Home() {
         description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
         technologies: ["typescript", "test", "test"],
         github: "#",
+    },
+        {
+        nom: "Space Invaders",
+        description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
+        technologies: ["typescript", "test", "test"],
+        github: "#",
+    },
+        {
+        nom: "Space Invaders",
+        description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
+        technologies: ["typescript", "test", "test"],
+        github: "#",
     }
 ]
 
@@ -32,6 +44,8 @@ export default function Home() {
             <Text component="p" level={1}>Text niveau 1</Text>
             <Text component="p" level={2}>Text niveau 2</Text>
             <Text component="p" level={3}>Text niveau 3</Text>
+            <Text component="p" level={4}>Text niveau 4</Text>
+            <Text component="p" level={5}>Text niveau 5</Text>
         </div>
 
         <div>
