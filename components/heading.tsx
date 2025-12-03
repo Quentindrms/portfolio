@@ -12,7 +12,7 @@ export interface HeadingProps extends JSX.HTMLAttributes<HTMLHeadingElement> {
     level?: HeadingLevel,
 }
 
-const globalClasses = "text-title-primary text-primary-text"
+const globalClasses = "font-title-primary text-primary-text"
 
 const levelclasses: Record<HeadingLevel, string> = {
     1: 'text-6xl',

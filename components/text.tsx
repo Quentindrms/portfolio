@@ -12,7 +12,7 @@ type TextProps = JSX.HTMLAttributes<HTMLParagraphElement | HTMLSpanElement> & {
     bold?: BoldValue,
 }
 
-const paragraphGlobalClasses = "text-primary-text";
+const paragraphGlobalClasses = "text-primary-text font-text-primary";
 
 const levelclasses: Record<HeadingLevel, string> = {
     1: "text-5xl",
