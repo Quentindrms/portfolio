@@ -10,7 +10,7 @@ interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {
     component: ComponentType,
 }
 
-const globalButtonClasses = "border border-1 border-primary-border text-primary-text p-4 -skew-x-10 hover:border-slate-500 hover:text-slate-500";
+const globalButtonClasses = "cursor-pointer border border-1 border-primary-border text-primary-text p-4 -skew-x-10 hover:border-secondary-border hover:text-secondary-text";
 
 
 export default function Button(props:ButtonProps) {

@@ -5,9 +5,14 @@
 @theme{
   
   --color-background: var(--color-slate-800);
+  --color-secondary: var(--color-blue-600);
+
 
   --color-primary-text: var(--color-stone-50);
+  --color-secondary-text: var(--color-blue-600);
+
   --color-primary-border: var(--color-stone-100);
+  --color-secondary-border: var(--color-blue-600); 
 
   --font-title-primary: "Work Sans", sans-serif;
   --font-text-primary: "Rethink Sans", sans-serif; 
