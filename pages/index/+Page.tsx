@@ -1,16 +1,9 @@
-import { Counter } from "./Counter.js";
 
-export default function Page() {
-  return (
-    <>
-      <h1>My Vike app</h1>
-      <p>This page is:</p>
-      <ul>
-        <li>Rendered to HTML.</li>
-        <li>
-          Interactive. <Counter />
-        </li>
-      </ul>
-    </>
-  );
+export default function Home() {
+
+    return (
+        <div class=''>
+            <h1 class='text-stone-50 font-title-primary'>Bonjour le monde !</h1>
+        </div>
+    )
 }
