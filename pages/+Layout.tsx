@@ -22,7 +22,7 @@ const navigationLink = [
 export default function Layout(props: { children?: JSX.Element }) {
 
     return (
-        <div class='flex flex-col flex-grow h-screen bg-background'>
+        <div class='flex flex-col flex-grow bg-background'>
             <Header />
             {props.children}
         </div>
@@ -32,7 +32,7 @@ export default function Layout(props: { children?: JSX.Element }) {
 function Header() {
 
     return (
-        <nav class='w-screen p-3 flex flex-row justify-end gap-10 items-center'>
+        <nav class='w-screen p-3 flex flex-row justify-end gap-10 items-center fixed bg-background/25 backdrop-blur-md'>
             <For each={navigationLink}>
                 {(items) => (
                     <NavigationLink name={items.name} value={items.value} />

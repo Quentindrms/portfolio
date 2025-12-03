@@ -3,6 +3,7 @@ import Heading from "./heading";
 import Text from "./text";
 import Label from "./label";
 import Link from "./link";
+import clsx from "clsx";
 
 export type ProjectType = {
     nom: string,
@@ -22,11 +23,11 @@ export default function Project(props: ProjectProps) {
 
     return (
         <>
-            <div>
+            <div class="flex flex-col items-center gap-5 p-5">
                 <For each={props.project}>
-                    {(project) => (
-                        <div class='flex flex-row border-1 border-primary-border p-4 w-4xl items-center rounded-xl'>
-                            <div class="flex flex-col gap-5">
+                    {(project, index) => (
+                        <div class={clsx(['flex', 'border-1', 'border-primary-border', 'p-4', 'w-4xl', 'items-center', 'rounded-xl', index()%2 ? 'flex-row' : 'flex-row-reverse'])}>
+                            <div class={clsx(["flex", "flex-col", "gap-5"])}>
                                 <Heading component="h4" level={4}>{project.nom}</Heading>
                                 <Text level={3}>{project.description}</Text>
                                 <div class='flex flex-row gap-3'>
