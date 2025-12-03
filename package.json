@@ -5,15 +5,16 @@
     "preview": "vike build && vike preview"
   },
   "dependencies": {
-    "vike": "^0.4.247",
+    "clsx": "^2.1.1",
     "solid-js": "^1.9.10",
+    "vike": "^0.4.247",
     "vike-solid": "^0.7.13"
   },
   "devDependencies": {
-    "typescript": "^5.9.3",
-    "vite": "^7.2.6",
+    "@tailwindcss/vite": "^4.1.17",
     "tailwindcss": "^4.1.17",
-    "@tailwindcss/vite": "^4.1.17"
+    "typescript": "^5.9.3",
+    "vite": "^7.2.6"
   },
   "type": "module"
 }
