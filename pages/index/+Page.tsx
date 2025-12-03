@@ -1,3 +1,4 @@
+import Button from "../../components/button";
 import Heading from "../../components/heading";
 import NavigationLink from "../../components/navLink";
 import Text from "../../components/text";
@@ -21,6 +22,9 @@ export default function Home() {
         </div>
         <div>
             <NavigationLink name="Le lien" value=""/>
+        </div>
+        <div>
+            <Button component="button">Cliquez moi</Button>
         </div>
         </>
     )

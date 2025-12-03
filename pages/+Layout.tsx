@@ -1,6 +1,8 @@
+import Button from '../components/button';
 import NavigationLink from '../components/navLink';
+import Text from '../components/text';
 import './tailwind.css';
-import {For, type JSX} from 'solid-js';
+import { For, type JSX } from 'solid-js';
 
 const navigationLink = [
     {
@@ -17,9 +19,9 @@ const navigationLink = [
     }
 ];
 
-export default function Layout(props:{children?:JSX.Element}){
+export default function Layout(props: { children?: JSX.Element }) {
 
-    return(
+    return (
         <div class='w-screen h-screen bg-background'>
             <Header />
             {props.children}
@@ -27,16 +29,17 @@ export default function Layout(props:{children?:JSX.Element}){
     )
 }
 
-function Header(){
+function Header() {
 
-    return(
-        <nav class='w-screen flex flex-row justify-end gap-10'>
+    return (
+        <nav class='w-screen p-3 flex flex-row justify-end gap-10 items-center'>
             <For each={navigationLink}>
-            {(items) => (
-                <NavigationLink name={items.name} value={items.value} />
-            )
-            }
+                {(items) => (
+                    <NavigationLink name={items.name} value={items.value} />
+                )
+                }
             </For>
+            <Button component='button'>Mon CV</Button>
         </nav>
     )
 }
