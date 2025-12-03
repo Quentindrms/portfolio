@@ -39,7 +39,7 @@ function getBoldCLasses(props: BoldValue|undefined){
     return boldCLasses[props ?? "regular"];
 }
 
-export function Heading(props:HeadingProps) {
+export default function Heading(props:HeadingProps) {
 
     const [local, rest] = splitProps(props, ["level", "component", "bold"]);
     const Component = local.component || `h${local.level ?? 1}`; 
