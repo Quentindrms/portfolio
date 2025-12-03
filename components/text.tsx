@@ -43,7 +43,7 @@ export default function Text(props: TextProps){
 
     return(
         <>
-            <Dynamic {...rest} component={Component} class={clsx([paragraphGlobalClasses, getLevelClasses(props.level), getBoldClasses(props.bold)])}></Dynamic>
+            <Dynamic {...rest} component={Component} class={clsx([rest.class, paragraphGlobalClasses, getLevelClasses(props.level), getBoldClasses(props.bold)])}></Dynamic>
         </>
     )
 }
