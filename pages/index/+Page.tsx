@@ -1,4 +1,5 @@
 import Heading from "../../components/heading";
+import NavigationLink from "../../components/navLink";
 import Text from "../../components/text";
 
 export default function Home() {
@@ -17,6 +18,9 @@ export default function Home() {
             <Text component="p" level={1}>Text niveau 1</Text>
             <Text component="p" level={2}>Text niveau 2</Text>
             <Text component="p" level={3}>Text niveau 3</Text>
+        </div>
+        <div>
+            <NavigationLink name="Le lien" value=""/>
         </div>
         </>
     )
