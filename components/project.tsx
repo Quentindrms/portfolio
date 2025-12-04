@@ -5,18 +5,11 @@ import Label from "./label";
 import Link from "./link";
 import clsx from "clsx";
 
-export type ProjectType = {
-    nom: string,
-    description: string,
-    technologies: string[],
-    github: string,
-}
+import type { ProjectType } from "../types/Types";
 
 interface ProjectProps extends JSX.HTMLAttributes<HTMLDivElement> {
     project: ProjectType[],
 }
-
-
 
 
 export default function Project(props: ProjectProps) {

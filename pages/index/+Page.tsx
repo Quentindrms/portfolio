@@ -1,35 +1,13 @@
 import Heading from "../../components/heading";
 import Project from "../../components/project";
 import Text from "../../components/text";
-import type { ProjectType } from "../../components/project";
 import TypeWriter from "../../components/typeWriter";
 import { List, ListItem } from "../../components/list";
 
-import { hardSkills, softSkills } from "../../data/data";
+import { hardSkills, softSkills, project } from "../../data/data";
 import { For } from "solid-js";
 
 export default function Home() {
-
-    const project: ProjectType[] = [
-        {
-            nom: "Space Invaders",
-            description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
-            technologies: ["typescript", "test", "test"],
-            github: "#",
-        },
-        {
-            nom: "Space Invaders",
-            description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
-            technologies: ["typescript", "test", "test"],
-            github: "#",
-        },
-        {
-            nom: "Space Invaders",
-            description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
-            technologies: ["typescript", "test", "test"],
-            github: "#",
-        }
-    ]
 
     return (
         <>
