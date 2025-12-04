@@ -19,7 +19,7 @@ export default function Project(props: ProjectProps) {
             <div class="flex flex-col items-center gap-10 p-5">
                 <For each={props.project}>
                     {(project, index) => (
-                        <div class={clsx(['flex', 'border-primary-border/10','border','p-4', 'w-4xl', 'items-center', 'rounded-xl', index()%2 ? 'flex-row' : 'flex-row-reverse', 'shadow-xl'])}>
+                        <div class={clsx(['flex', 'border-primary-border/10','border','p-4', 'w-4xl', 'items-center', 'rounded-xl', index()%2 ? 'flex-row' : 'flex-row-reverse', 'shadow-xl', 'transition', 'hover:scale-102'])}>
                             <div class={clsx(["flex", "flex-col", "gap-5"])}>
                                 <Heading component="h4" level={4}>{project.nom}</Heading>
                                 <Text level={3}>{project.description}</Text>
@@ -31,10 +31,10 @@ export default function Project(props: ProjectProps) {
                                         )}
                                     </For>
                                 </div >
-                                <Link link="#">Github</Link>
+                                <Link link={project.github}>Github</Link>
                             </div>
                             <div class='p-4'>
-                                <img src="https://placehold.co/300x300"></img>
+                                <img src={project.image} class="max-w-[330px] rounded-xl border-2 border-primary-border/10 shadow-2xl"></img>
                             </div>
                         </div>
                     )}

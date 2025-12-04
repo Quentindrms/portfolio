@@ -3,4 +3,5 @@ export type ProjectType = {
     description: string,
     technologies: string[],
     github: string,
+    image: string,
 }
