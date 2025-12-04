@@ -1,9 +1,12 @@
 import Heading from "../../components/heading";
 import Project from "../../components/project";
 import Text from "../../components/text";
-
 import type { ProjectType } from "../../components/project";
 import TypeWriter from "../../components/typeWriter";
+import { List, ListItem } from "../../components/list";
+
+import { hardSkills, softSkills } from "../../data/data";
+import { For } from "solid-js";
 
 export default function Home() {
 
@@ -38,14 +41,39 @@ export default function Home() {
                 </Text>
                 <TypeWriter />
             </div>
-            <div class='flex flex-col h-screen pt-24' id="about">
+            <Heading level={2} component="h2" class="">01. À propos</Heading>
+            <div class='flex flex-col h-screen' id="about">
+                <Text level={1} class='self-center text-center w-5xl pt-24'>Je m’appelle Quentin. Je suis passionné par l’informatique et le développement depuis l’âge de dix ans.
+                    Issu d’une formation en droit, j’ai rapidement décidé de m’orienter dans le développement web.</Text>
 
-                <Heading level={2} component="h2">01. À propos</Heading>
+                <div id="blockSkills" class='p-10 flex flex-row justify-between items-center'>
+                    <div id="skills">
+                        <Heading level={3} component="h3">Compétences techniques</Heading>
+                        <List class="pt-4">
+                            <For each={hardSkills}>
+                                {(skill) => (
+                                    <ListItem class='pt-4'>{skill}</ListItem>
+                                )}
+                            </For>
+                        </List>
+                    </div>
+                    <div class='h-80 w-2 bg-primary-border rounded-2xl'></div>
+                    <div id="softSkills">
+                        <Heading level={3} component="h3">Compétences interpersonnelles</Heading>
+                        <List class="pt-4">
+                            <For each={softSkills}>
+                                {(skill) => (
+                                    <ListItem class="pt-4">{skill}</ListItem>
+                                )}
+                            </For>
+                        </List>
+                    </div>
+                </div>
             </div>
             <div class='flex flex-col pt-24'>
 
                 <Heading level={2} component="h2" id="project">02. Projets</Heading>
-                <Project project={project}/>
+                <Project project={project} />
             </div>
             <div class='flex flex-col h-screen pt-24'>
 
