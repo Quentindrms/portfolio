@@ -4,8 +4,9 @@ import Text from "../../components/text";
 import TypeWriter from "../../components/typeWriter";
 import { List, ListItem } from "../../components/list";
 
-import { hardSkills, softSkills, project } from "../../data/data";
+import { hardSkills, softSkills, project, contacts } from "../../data/data";
 import { For } from "solid-js";
+import ContactImages from "../../components/contactImages";
 
 export default function Home() {
 
@@ -20,7 +21,7 @@ export default function Home() {
                 <TypeWriter />
             </div>
             <div class='flex flex-col h-screen' id="about">
-                <Heading level={2} component="h2" class="">01. À propos</Heading>
+                <Heading level={2} component="h2" class="pl-10">01. À propos</Heading>
 
                 <Text level={1} class='self-center text-center w-5xl pt-24'>Je m’appelle Quentin. Je suis passionné par l’informatique et le développement depuis l’âge de dix ans.
                     Issu d’une formation en droit, j’ai rapidement décidé de m’orienter dans le développement web.</Text>
@@ -51,12 +52,21 @@ export default function Home() {
             </div>
             <div class='flex flex-col pt-24'>
 
-                <Heading level={2} component="h2" id="project">02. Projets</Heading>
+                <Heading level={2} component="h2" id="project" class="pl-10">02. Projets</Heading>
                 <Project project={project} />
             </div>
             <div class='flex flex-col h-screen pt-24'>
-
-                <Heading level={2} component="h2" id="contact">03. Me contacter</Heading>
+                <Heading level={2} component="h2" id="contact" class="pl-10">03. Me contacter</Heading>
+                <div class='flex justify-center'>
+                    <Text class='text-center w-5xl pt-15 pb-15'>Vous pouvez me contacter sur les réseaux listés ci-dessous. Je vous répondrais rapidement</Text>
+                </div>
+                <div class="flex flex-row justify-center gap-20 p-10">
+                    <For each={contacts}>
+                        {(item) => (
+                            <ContactImages data={item} />
+                        )}
+                    </For>
+                </div>
             </div>
         </>
     )

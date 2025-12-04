@@ -1,5 +1,5 @@
 
-import {ProjectType} from "../types/Types"
+import { ContactType, ProjectType } from "../types/Types"
 
 export const hardSkills = ["Typescript", "React", "SolidJS", "PostgreSQL", "Docker"];
 export const softSkills = ["Adaptabilité", "Rigueur", "Curiosité", "Autonomie", "Esprit d'analyse et de synthèse"];
@@ -25,5 +25,20 @@ export const project: ProjectType[] = [
         technologies: ["Typescript", "React"],
         github: "#",
         image: "../assets/images/screenshots/flux-films.png"
+    }
+];
+
+export const contacts: ContactType[] = [
+    {
+        name: "Github",
+        alt: "Image cliquable menant à mon profil Github",
+        image: "../assets/images/illustrations/github.svg",
+        lien: ''
+    },
+        {
+        name: "Linkedin",
+        alt: "Image cliquable menant à mon profil Linkedin",
+        image: "../assets/images/illustrations/linkedin.svg",
+        lien: '',
     }
 ]
