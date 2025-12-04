@@ -1,11 +1,9 @@
-import Button from "../../components/button";
 import Heading from "../../components/heading";
-import NavigationLink from "../../components/navLink";
 import Project from "../../components/project";
 import Text from "../../components/text";
 
 import type { ProjectType } from "../../components/project";
-import Label from "../../components/label";
+import TypeWriter from "../../components/typeWriter";
 
 export default function Home() {
 
@@ -38,6 +36,7 @@ export default function Home() {
                     Je suis Quentin Derimais. <br />
                     Développeur fullstack junior. <br />
                 </Text>
+                <TypeWriter />
             </div>
             <div class='flex flex-col h-screen pt-24' id="about">
 
