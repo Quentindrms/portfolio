@@ -1,6 +1,5 @@
 import Button from '../components/button';
 import NavigationLink from '../components/navLink';
-import Text from '../components/text';
 import './tailwind.css';
 import { For, type JSX } from 'solid-js';
 
@@ -22,7 +21,7 @@ const navigationLink = [
 export default function Layout(props: { children?: JSX.Element }) {
 
     return (
-        <div class='flex flex-col flex-grow bg-background'>
+        <div class='flex flex-col grow bg-background'>
             <Header />
             {props.children}
         </div>
