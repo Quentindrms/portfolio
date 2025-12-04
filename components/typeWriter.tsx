@@ -4,9 +4,9 @@ import Text from "./text";
 
 export default function TypeWriter() {
 
-    const arrWords = ["faire chier Estelle", "traumatiser vos enfants", "pécho votre mari"]
+    const arrWords = ["des applications intégrants les impératifs de conformité.", "des supports soucieux de vos données.", "un code clair, structuré et accessible."]
 
-    const sloganText = "Je suis capable de ";
+    const sloganText = "Je développe ";
     const sloganLength = sloganText.length;
 
     const [word, setWord] = createSignal(sloganText + arrWords[0]);
@@ -16,7 +16,8 @@ export default function TypeWriter() {
     const [arrCount, setArrCount] = createSignal(0);
 
     let intervalID: number;
-    const intervalTime = 60;
+    const intervalTime = 40;
+    const intervalTimeClear = 30;
 
 
     onMount(() => {
@@ -41,7 +42,7 @@ export default function TypeWriter() {
             clearInterval(intervalID);
             setTimeout(() => {
                 setWordCount(0);
-                intervalID = setInterval(cleaningWord, intervalTime);
+                intervalID = setInterval(cleaningWord, intervalTimeClear);
             }, 2000);
         }
     }
@@ -62,8 +63,8 @@ export default function TypeWriter() {
                 setArrCount(nextArr)
                 setWord(arrWords[nextArr]);
                 setWordCount(0);
-                intervalID = setInterval(cleaningWord, intervalTime);
-            }, 2000);
+                intervalID = setInterval(cleaningWord, intervalTimeClear);
+            }, 1000);
         }
     }
 
@@ -75,13 +76,13 @@ export default function TypeWriter() {
             clearInterval(intervalID);
             setTimeout(() => {
                 intervalID = setInterval(typingWord, intervalTime);
-            }, 1000)
+            }, 500)
         }
     }
 
     return (
         <>
-            <Text class='text-center h-15'>{typedWord()}</Text>
+            <Text level={3} class='text-center h-15 font-light'>{typedWord()}</Text>
         </>
     )
 }

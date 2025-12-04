@@ -34,7 +34,7 @@ export default function Home() {
                 <Text class="align-center text-center">
                     Bonjour. <br />
                     Je suis Quentin Derimais. <br />
-                    Développeur fullstack junior. <br />
+                    Développeur fullstack. <br />
                 </Text>
                 <TypeWriter />
             </div>
