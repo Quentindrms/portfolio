@@ -1,35 +1,13 @@
 import Heading from "../../components/heading";
 import Project from "../../components/project";
 import Text from "../../components/text";
-import type { ProjectType } from "../../components/project";
 import TypeWriter from "../../components/typeWriter";
 import { List, ListItem } from "../../components/list";
 
-import { hardSkills, softSkills } from "../../data/data";
+import { hardSkills, softSkills, project } from "../../data/data";
 import { For } from "solid-js";
 
 export default function Home() {
-
-    const project: ProjectType[] = [
-        {
-            nom: "Space Invaders",
-            description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
-            technologies: ["typescript", "test", "test"],
-            github: "#",
-        },
-        {
-            nom: "Space Invaders",
-            description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
-            technologies: ["typescript", "test", "test"],
-            github: "#",
-        },
-        {
-            nom: "Space Invaders",
-            description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
-            technologies: ["typescript", "test", "test"],
-            github: "#",
-        }
-    ]
 
     return (
         <>
@@ -41,8 +19,9 @@ export default function Home() {
                 </Text>
                 <TypeWriter />
             </div>
-            <Heading level={2} component="h2" class="">01. À propos</Heading>
             <div class='flex flex-col h-screen' id="about">
+                <Heading level={2} component="h2" class="">01. À propos</Heading>
+
                 <Text level={1} class='self-center text-center w-5xl pt-24'>Je m’appelle Quentin. Je suis passionné par l’informatique et le développement depuis l’âge de dix ans.
                     Issu d’une formation en droit, j’ai rapidement décidé de m’orienter dans le développement web.</Text>
 
