@@ -33,12 +33,12 @@ export const contacts: ContactType[] = [
         name: "Github",
         alt: "Image cliquable menant à mon profil Github",
         image: "../assets/images/illustrations/github.svg",
-        lien: ''
+        lien: 'https://github.com/Quentindrms'
     },
         {
         name: "Linkedin",
         alt: "Image cliquable menant à mon profil Linkedin",
         image: "../assets/images/illustrations/linkedin.svg",
-        lien: '',
+        lien: 'https://www.linkedin.com/in/quentin-derimais/',
     }
 ]
