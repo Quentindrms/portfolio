@@ -4,9 +4,12 @@ import Text from "./text";
 
 export default function TypeWriter() {
 
-    const arrWords = ["Lorem ipsum dolor sit amet", "Consectetur adipiscing elit", "Nunc imperdiet sapien nec dolor convallis facilisis"]
+    const arrWords = ["faire chier Estelle", "traumatiser vos enfants", "pécho votre mari"]
 
-    const [word, setWord] = createSignal('');
+    const sloganText = "Je suis capable de ";
+    const sloganLength = sloganText.length;
+
+    const [word, setWord] = createSignal(sloganText + arrWords[0]);
     const [typedWord, setTypedWord] = createSignal('');
 
     const [wordCount, setWordCount] = createSignal(0);
@@ -17,12 +20,31 @@ export default function TypeWriter() {
 
 
     onMount(() => {
-        intervalID = setInterval(typingWord, intervalTime);
+        intervalID = setInterval(typingSlogan, intervalTime);
     })
 
     onCleanup(() => {
         clearInterval(intervalID);
     })
+
+    function typingSlogan() {
+        const i = wordCount();
+
+        if (i < word().length) {
+            const char = word().charAt(i);
+            setTypedWord(typedWord() + char);
+            setWordCount(wordCount() + 1)
+        }
+        else {
+            setArrCount(arrCount()+1)
+            setWord(arrWords[1]);
+            clearInterval(intervalID);
+            setTimeout(() => {
+                setWordCount(0);
+                intervalID = setInterval(cleaningWord, intervalTime);
+            }, 2000);
+        }
+    }
 
     function typingWord() {
         const i = wordCount();
@@ -46,16 +68,15 @@ export default function TypeWriter() {
     }
 
     function cleaningWord() {
-        if (typedWord().length > 0) {
+        if (typedWord().length > sloganLength) {
             setTypedWord(typedWord().slice(0, typedWord().length - 1))
         }
-        else{
+        else {
             clearInterval(intervalID);
             setTimeout(() => {
-                intervalID = setInterval(typingWord, intervalTime); 
+                intervalID = setInterval(typingWord, intervalTime);
             }, 1000)
         }
-
     }
 
     return (
