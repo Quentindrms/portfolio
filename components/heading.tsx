@@ -46,7 +46,7 @@ export default function Heading(props:HeadingProps) {
 
     return (
         <>
-        <Dynamic {...rest} component={Component} class={clsx([globalClasses, getLevelClasses(props.level), getBoldCLasses(props.bold)])}></Dynamic>
+        <Dynamic {...rest} component={Component} class={clsx([globalClasses, getLevelClasses(props.level), getBoldCLasses(props.bold), props.class])}></Dynamic>
         </>
     )
 }
