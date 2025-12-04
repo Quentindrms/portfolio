@@ -7,20 +7,20 @@ export const softSkills = ["Adaptabilité", "Rigueur", "Curiosité", "Autonomie"
 export const project: ProjectType[] = [
     {
         nom: "Space Invaders",
-        description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
-        technologies: ["typescript", "test", "test"],
+        description: "Un ramake du celebre jeu Space Invaders, réalisé durant ma formation",
+        technologies: ["Typescript"],
         github: "#",
     },
     {
-        nom: "Space Invaders",
-        description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
-        technologies: ["typescript", "test", "test"],
+        nom: "Dino Park",
+        description: "Un parc à thème dinosaures, il est possible de gérer le parc et de passer commande.",
+        technologies: ["Typescript", "PostgreSQL"],
         github: "#",
     },
     {
-        nom: "Space Invaders",
-        description: "Un petit jeu reprenant les principes et le design du celèbre jeu space invaders",
-        technologies: ["typescript", "test", "test"],
+        nom: "Flux Films",
+        description: "Une plateforme de streaming avec les données API de The Movie Database.",
+        technologies: ["Typescript", "React"],
         github: "#",
     }
 ]
