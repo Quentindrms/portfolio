@@ -21,7 +21,7 @@ const navigationLink = [
 export default function Layout(props: { children?: JSX.Element }) {
 
     return (
-        <div class='flex flex-col grow bg-background'>
+        <div class='flex flex-col grow bg-background scroll-smooth'>
             <Header />
             {props.children}
         </div>
