@@ -6,8 +6,8 @@ import vikeSolid from "vike-solid/config";
 
 export default {
   // https://vike.dev/head-tags
-  title: "My Vike App",
-  description: "Demo showcasing Vike",
+  title: "Portfolio - Quentin Derimais",
+  description: "Quentin Derimais, développeur fullstack",
 
   extends: [vikeSolid],
 } satisfies Config;
