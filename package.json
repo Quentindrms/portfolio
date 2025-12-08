@@ -8,6 +8,7 @@
     "clsx": "^2.1.1",
     "solid-js": "^1.9.10",
     "vike": "^0.4.247",
+    "vike-photon": "^0.1.22",
     "vike-solid": "^0.7.13"
   },
   "devDependencies": {
