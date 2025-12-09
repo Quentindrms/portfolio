@@ -20,13 +20,13 @@ export default function Home() {
                 </Text>
                 <TypeWriter />
             </div>
-            <div class='flex flex-col h-screen' id="about">
+            <div class='flex flex-col md:h-screen' id="about">
                 <Heading level={2} component="h2" class="pl-10">01. À propos</Heading>
 
-                <Text level={1} class='self-center text-center w-5xl pt-24'>Je m’appelle Quentin. Je suis passionné par l’informatique et le développement depuis l’âge de dix ans.
+                <Text level={1} class='self-center text-center md:w-5xl pt-24'>Je m’appelle Quentin. Je suis passionné par l’informatique et le développement depuis l’âge de dix ans.
                     Issu d’une formation en droit, j’ai rapidement décidé de m’orienter dans le développement web.</Text>
 
-                <div id="blockSkills" class='p-10 flex flex-row justify-between items-center'>
+                <div id="blockSkills" class='p-10 flex flex-col md:flex-row md:justify-between items-center'>
                     <div id="skills">
                         <Heading level={3} component="h3">Compétences techniques</Heading>
                         <List class="pt-4">
@@ -37,7 +37,7 @@ export default function Home() {
                             </For>
                         </List>
                     </div>
-                    <div class='h-80 w-2 bg-primary-border rounded-2xl'></div>
+                    <div class='h-0 w-0 md:visible md:h-80 md:w-2 m-5 md:m-0 bg-primary-border rounded-2xl'></div>
                     <div id="softSkills">
                         <Heading level={3} component="h3">Compétences interpersonnelles</Heading>
                         <List class="pt-4">
