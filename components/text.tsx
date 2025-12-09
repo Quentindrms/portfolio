@@ -15,11 +15,11 @@ type TextProps = JSX.HTMLAttributes<HTMLParagraphElement | HTMLSpanElement> & {
 const paragraphGlobalClasses = "text-primary-text font-text-primary";
 
 const levelclasses: Record<HeadingLevel, string> = {
-    1: "text-5xl",
-    2: "text-4xl",
-    3: "text-3xl",
-    4: "text-2xl",
-    5: "text-xl",
+    1: "text-3xl md:text-5xl",
+    2: "text-2xl md:text-4xl",
+    3: "text-xl md:text-3xl",
+    4: "text-lg md:text-2xl",
+    5: "text-md md:text-xl",
 }
 
 const boldCLasses: Record<BoldValue, string> = {
