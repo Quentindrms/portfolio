@@ -19,11 +19,13 @@ export default function Project(props: ProjectProps) {
             <div class="flex flex-col items-center gap-10 p-5">
                 <For each={props.project}>
                     {(project, index) => (
-                        <div class={clsx(['flex', 'border-primary-border/10','border','p-4', 'w-4xl', 'items-center', 'rounded-xl', index()%2 ? 'flex-row' : 'flex-row-reverse', 'shadow-xl', 'transition', 'hover:scale-102'])}>
-                            <div class={clsx(["flex", "flex-col", "gap-5"])}>
+                        <div class={clsx(['flex', 'border-primary-border/10','border','md:p-4', 'w-s md:w-4xl', 'items-center', 'rounded-xl', index()%2 ? ' flex-col md:flex-row' : 'flex-col md:flex-row-reverse', 'shadow-xl', 'transition', 'hover:scale-102'])}>
+                           
+                            <div class={clsx(["flex", "flex-col", "gap-5", "justify-center"])}>
                                 <Heading component="h4" level={4}>{project.nom}</Heading>
-                                <Text level={3}>{project.description}</Text>
-                                <div class='flex flex-row gap-3'>
+                                <Text class="w-xs md:w-fit" level={3}>{project.description}</Text>
+
+                                <div class='flex flex-col md:flex-row gap-3'>
                                     <Text component="p" level={3}>Technologies :</Text>
                                     <For each={project.technologies}>
                                         {(item, index) => (
@@ -34,7 +36,7 @@ export default function Project(props: ProjectProps) {
                                 <Link link={project.github}>Github</Link>
                             </div>
                             <div class='p-4'>
-                                <img src={project.image} class="max-w-[330px] rounded-xl border-2 border-primary-border/10 shadow-2xl"></img>
+                                <img src={project.image} class="max-w-[265px] md:max-w-[330px] rounded-xl border-2 border-primary-border/10 shadow-2xl"></img>
                             </div>
                         </div>
                     )}
