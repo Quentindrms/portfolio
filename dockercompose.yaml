@@ -1,7 +1,6 @@
-version: '3'
-
 services: 
   ngnix: 
+    image: ghcr.io/quentindrms/portfolio-nginx:latest
     container_name: nginx
     build:
       dockerfile: nginx.dockerfile
@@ -11,6 +10,7 @@ services:
       - portfolio
   
   portfolio:
+    image: ghcr.io/quentindrms/portfolio:latest 
     build: 
       dockerfile: prod.dockerfile
     container_name: portfolio
