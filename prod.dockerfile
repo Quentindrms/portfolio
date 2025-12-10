@@ -14,4 +14,4 @@ EXPOSE 3000
 
 ENV NODE_ENV=production
 
-CMD ["node dist/server/index.mjs"]
+CMD ["node", "./dist/server/index.mjs"]

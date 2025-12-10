@@ -1,0 +1,19 @@
+version: '3'
+
+services: 
+  ngnix: 
+    container_name: nginx
+    build:
+      dockerfile: nginx.dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - portfolio
+  
+  portfolio:
+    build: 
+      dockerfile: prod.dockerfile
+    container_name: portfolio
+
+volumes:
+  ngnix_conf: 
