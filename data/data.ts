@@ -15,21 +15,21 @@ export const project: ProjectType[] = [
         nom: "Space Invaders",
         description: "Un ramake du celebre jeu Space Invaders, réalisé durant ma formation",
         technologies: ["Typescript"],
-        github: "#",
+        github: "https://github.com/Quentindrms/space-invaders",
         image: spaceInvader
     },
     {
         nom: "Dino Park",
         description: "Un parc à thème dinosaures, il est possible de gérer le parc et de passer commande.",
         technologies: ["Typescript", "PostgreSQL"],
-        github: "#",
+        github: "https://github.com/Quentindrms/Dinopark",
         image: dinoPark
     },
     {
         nom: "Flux Films",
         description: "Une plateforme de streaming avec les données API de The Movie Database.",
         technologies: ["Typescript", "React"],
-        github: "#",
+        github: "https://github.com/Quentindrms/FluxFilms",
         image: fluxFlims
     }
 ];

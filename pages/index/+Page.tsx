@@ -58,7 +58,7 @@ export default function Home() {
             <div class='flex flex-col h-screen pt-24'>
                 <Heading level={2} component="h2" id="contact" class="pl-10">03. Me contacter</Heading>
                 <div class='flex justify-center'>
-                    <Text class='text-center w-5xl pt-15 pb-15'>Vous pouvez me contacter sur les réseaux listés ci-dessous. Je vous répondrais rapidement</Text>
+                    <Text class='text-center w-5xl pt-15 pb-15'>Vous pouvez me contacter sur les réseaux listés ci-dessous. Je vous répondrai rapidement</Text>
                 </div>
                 <div class="flex flex-row justify-center gap-20 p-10">
                     <For each={contacts}>
