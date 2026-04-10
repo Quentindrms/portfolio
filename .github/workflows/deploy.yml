@@ -34,7 +34,7 @@ jobs:
       uses: docker/login-action@v3
       with:
         registry: ghcr.io
-        username: ${{ github.actor }}
+        username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build and push portfolio image
@@ -43,7 +43,7 @@ jobs:
         context: .
         file: prod.dockerfile
         push: true
-        tags: ghcr.io/quentindrms/portfolio:latest
+        tags: ghcr.io/${{ github.repository_owner }}/portfolio:latest
 
     - name: Build and push nginx image
       uses: docker/build-push-action@v6
@@ -51,7 +51,7 @@ jobs:
         context: .
         file: nginx.dockerfile
         push: true
-        tags: ghcr.io/quentindrms/portfolio-nginx:latest
+        tags: ghcr.io/${{ github.repository_owner }}/portfolio-nginx:latest
 
     - name: SSH deployment
       uses: appleboy/ssh-action@v1
