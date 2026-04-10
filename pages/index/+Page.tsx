@@ -13,6 +13,7 @@ export default function Home() {
     return (
         <>
             <div class='flex flex-col h-screen justify-center pt-24'>
+                <Heading>VERSION TEST</Heading>
                 <Text class="align-center text-center">
                     Bonjour. <br />
                     Je suis Quentin Derimais. <br />
