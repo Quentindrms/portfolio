@@ -1,0 +1,13 @@
+services:
+  nginx:
+    image: ghcr.io/quentindrms/portfolio-nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - portfolio
+
+  portfolio:
+    image: ghcr.io/quentindrms/portfolio:latest
+    container_name: portfolio
+    restart: on-failure
