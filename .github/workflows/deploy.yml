@@ -1,0 +1,31 @@
+name: Deploy to vps 
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+  
+  steps:
+    - name : Code checkout 
+      uses: actions/checkout@v4
+    
+    - name : Install dependencies 
+      run : npm ci
+
+    - name : Tests 
+      run : npm run test
+    
+    - name : SSH deployment 
+      uses : appleboy/ssh-action@v1
+      with: 
+        host: ${{secrets.VPS_HOST}}
+        username:  ${{secrets.VPS_USERNAME}}
+        key:  ${{secrets.SSH_PRIVATE_KEY}}
+        script: |
+          cd /home/ubuntu/portfolio
+          git pull
+          docker compose -f compose.prod.yaml pull
+          docker compose -f compose.prod.yaml up -d --remove-orphans
