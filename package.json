@@ -2,14 +2,16 @@
   "scripts": {
     "dev": "vike dev",
     "build": "vike build",
-    "preview": "vike build && vike preview"
+    "preview": "vike build && vike preview",
+    "test": "vitest"
   },
   "dependencies": {
     "clsx": "^2.1.1",
     "solid-js": "^1.9.10",
     "vike": "^0.4.247",
     "vike-photon": "^0.1.22",
-    "vike-solid": "^0.7.13"
+    "vike-solid": "^0.7.13",
+    "vitest": "^4.1.4"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.17",

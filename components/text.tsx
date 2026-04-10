@@ -1,42 +1,16 @@
 import clsx from "clsx";
 import {splitProps, type JSX} from "solid-js"
 import { Dynamic } from "solid-js/web";
-
-type HeadingLevel = 1 | 2 | 3 | 4 | 5;
-type BoldValue = "light" | "regular" | "bold" | "extra-bold" | "black";
+import { type TextLevel, type BoldValue, getTextLevelClass, getBoldClass } from "../utils/classNames";
 
 type TextProps = JSX.HTMLAttributes<HTMLParagraphElement | HTMLSpanElement> & {
     children: JSX.Element,
-    level?: HeadingLevel,
-    component?: "p" | "span", 
+    level?: TextLevel,
+    component?: "p" | "span",
     bold?: BoldValue,
 }
 
 const paragraphGlobalClasses = "text-primary-text font-text-primary";
-
-const levelclasses: Record<HeadingLevel, string> = {
-    1: "text-3xl md:text-5xl",
-    2: "text-2xl md:text-4xl",
-    3: "text-xl md:text-3xl",
-    4: "text-lg md:text-2xl",
-    5: "text-md md:text-xl",
-}
-
-const boldCLasses: Record<BoldValue, string> = {
-    light : "font-light",
-    regular : "font-regular",
-    bold: "font-bold",
-    "extra-bold": "font-extrabold",
-    black: "font-black",
-}
-
-function getLevelClasses(props:HeadingLevel|undefined){
-    return levelclasses[props ?? 1];
-}
-
-function getBoldClasses(props:BoldValue|undefined){
-    return boldCLasses[props ?? "regular"];
-}
 
 export default function Text(props: TextProps){
 
@@ -45,7 +19,7 @@ export default function Text(props: TextProps){
 
     return(
         <>
-            <Dynamic {...rest} component={Component} class={clsx([rest.class, paragraphGlobalClasses, getLevelClasses(props.level), getBoldClasses(props.bold)])}></Dynamic>
+            <Dynamic {...rest} component={Component} class={clsx([rest.class, paragraphGlobalClasses, getTextLevelClass(props.level), getBoldClass(props.bold)])}></Dynamic>
         </>
     )
 }
