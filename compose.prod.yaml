@@ -1,3 +1,4 @@
+services:
   portfolio:
     image: ghcr.io/quentindrms/portfolio:latest
     container_name: portfolio
