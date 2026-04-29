@@ -3,3 +3,9 @@ services:
     image: ghcr.io/quentindrms/portfolio:latest
     container_name: portfolio
     restart: on-failure
+    networks:
+      reverse-proxy-net
+
+networks:
+  reverse-proxy-net:
+    external: true
