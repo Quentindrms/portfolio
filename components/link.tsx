@@ -13,5 +13,5 @@ const globalClasses = "text-primary-text font-text-primary w-fit hover:text-blue
 
 export default function Link(props:LinkProps){
 
-    return(<a href={props.link} class={clsx([getLinkLevelClass(props.level), getBoldClass(props.bold), globalClasses])}>{props.children}</a>)
+    return(<a target="_blank"href={props.link} class={clsx([getLinkLevelClass(props.level), getBoldClass(props.bold), globalClasses])}>{props.children}</a>)
 }

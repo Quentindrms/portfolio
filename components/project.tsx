@@ -1,4 +1,4 @@
-import { For, type JSX } from "solid-js";
+import { For, Show, type JSX } from "solid-js";
 import Heading from "./heading";
 import Text from "./text";
 import Label from "./label";
@@ -25,7 +25,7 @@ export default function Project(props: ProjectProps) {
                                 <Heading component="h4" level={4}>{project.nom}</Heading>
                                 <Text class="w-xs md:w-fit" level={3}>{project.description}</Text>
 
-                                <div class='flex flex-col md:flex-row gap-3'>
+                                <div class='flex flex-col md:flex-row flex-wrap gap-3'>
                                     <Text component="p" level={3}>Technologies :</Text>
                                     <For each={project.technologies}>
                                         {(item, index) => (
@@ -34,8 +34,11 @@ export default function Project(props: ProjectProps) {
                                     </For>
                                 </div >
                                 <Link link={project.github}>Github</Link>
+                                <Show when={project.link}>
+                                    <Link link={project.link!}>Lien vers le projet</Link>
+                                </Show>
                             </div>
-                            <div class='p-4'>
+                            <div class='p-4 flex flex-wrap'>
                                 <img src={project.image} class="max-w-[265px] md:max-w-[330px] rounded-xl border-2 border-primary-border/10 shadow-2xl"></img>
                             </div>
                         </div>
