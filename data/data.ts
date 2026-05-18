@@ -13,7 +13,7 @@ import linkedinLogo from "../assets/images/illustrations/linkedin.svg"
 export const project: ProjectType[] = [
         {
         nom: "Proprieto",
-        description: "Un gestionnaire de propriété réalisé pour l'obtention de ma certification",
+        description: "Un gestionnaire de propriétés réalisé pour l'obtention de ma certification",
         technologies: ["SolidJS", "NestJS", "PostgreSQL", "Docker"],
         github: "https://github.com/Quentindrms/proprieto",
         link: "https://proprieto.quentin-derimais.fr",
@@ -21,7 +21,7 @@ export const project: ProjectType[] = [
     },
     {
         nom: "Space Invaders",
-        description: "Un ramake du celebre jeu Space Invaders, réalisé durant ma formation",
+        description: "Un remake du célèbre jeu Space Invaders, réalisé durant ma formation",
         technologies: ["Typescript"],
         github: "https://github.com/Quentindrms/space-invaders",
         image: spaceInvader
